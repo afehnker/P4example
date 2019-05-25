@@ -14,7 +14,7 @@ public class CustomerTest {
         Pete.addRental(new Rental(Black,1));
         Pete.update();
 
-        assertEquals(Pete.getOwed(), 7.5);
+        assertEquals(Pete.getOwed(), 8.5);
         assertEquals(Pete.getPoints(), 3);
     }
 }

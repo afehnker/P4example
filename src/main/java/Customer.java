@@ -26,18 +26,15 @@ class Customer {
         Enumeration<Rental> rentals = _rentals.elements();
 
         while (rentals.hasMoreElements()) {
-            double thisAmount = 0;
-            Rental each = (Rental) rentals.nextElement();
-            // determine amounts for each line
-            thisAmount = getThisAmount(thisAmount, each);
 
-            // show figures for this rental
-            totalAmount += thisAmount;
+            Rental each = (Rental) rentals.nextElement();
+            totalAmount += getThisAmount(each);;
         }
         return totalAmount;
     }
 
-    private double getThisAmount(double thisAmount, Rental each) {
+    private double getThisAmount(Rental each) {
+        double thisAmount = 0;
         switch (each.getMovie().getPriceCode()) {
             case Movie.REGULAR:
                 thisAmount += 2;

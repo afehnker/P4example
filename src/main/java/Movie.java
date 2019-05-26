@@ -24,4 +24,33 @@ public class Movie  {
         return _title;
     }
 
+    int getPoints(int dayRented) {
+        int points = 1;
+
+        // add bonus for a two day new release rental
+        if ((getPriceCode() == NEW_RELEASE) && dayRented > 1)
+            points++;
+        // show figures for this rental
+        return points;
+    }
+
+    double getCharge(int daysRented, Rental rental) {
+        double thisAmount=0;
+        switch (getPriceCode()) {
+            case REGULAR:
+                thisAmount += 2;
+                if (rental.getDaysRented() > 2)
+                    thisAmount += (daysRented - 2) * 1.5;
+                break;
+            case NEW_RELEASE:
+                thisAmount += daysRented * 3;
+                break;
+            case CHILDRENS:
+                thisAmount += 1.5;
+                if (rental.getDaysRented() > 3)
+                    thisAmount += (daysRented - 3) * 1.5;
+                break;
+        }
+        return thisAmount;
+    }
 }

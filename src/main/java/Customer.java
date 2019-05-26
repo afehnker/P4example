@@ -2,9 +2,6 @@
 import java.util.Enumeration;
 import java.util.Vector;
 
-import java.util.Enumeration;
-import java.util.Vector;
-
 class Customer {
     private String _name;
     private Vector<Rental> _rentals = new Vector<Rental>();
@@ -28,29 +25,9 @@ class Customer {
         while (rentals.hasMoreElements()) {
 
             Rental each = (Rental) rentals.nextElement();
-            totalAmount += getThisAmount(each);;
+            totalAmount += each.getCharge();;
         }
         return totalAmount;
-    }
-
-    private double getThisAmount(Rental rental) {
-        double thisAmount = 0;
-        switch (rental.getMovie().getPriceCode()) {
-            case Movie.REGULAR:
-                thisAmount += 2;
-                if (rental.getDaysRented() > 2)
-                    thisAmount += (rental.getDaysRented() - 2) * 1.5;
-                break;
-            case Movie.NEW_RELEASE:
-                thisAmount += rental.getDaysRented() * 3;
-                break;
-            case Movie.CHILDRENS:
-                thisAmount += 1.5;
-                if (rental.getDaysRented() > 3)
-                    thisAmount += (rental.getDaysRented() - 3) * 1.5;
-                break;
-        }
-        return thisAmount;
     }
 
     public int getPoints() {

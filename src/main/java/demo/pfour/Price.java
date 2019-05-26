@@ -1,7 +1,8 @@
+package demo.pfour;
 
 public interface Price {
-    int getPriceCode();
-    double getCharge(int daysRented);
+    public int getPriceCode();
+    public double getCharge(int daysRented);
 }
 
 class ChildrensPrice implements Price {

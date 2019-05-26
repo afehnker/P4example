@@ -1,5 +1,9 @@
-class Rental {
-    Movie _movie;
+package demo.pfour;
+
+import demo.pfour.Movie;
+
+public class Rental {
+    private Movie _movie;
     private int _daysRented;
 
     public Rental(Movie movie, int daysRented) {
@@ -15,11 +19,11 @@ class Rental {
         return _movie;
     }
 
-    double getCharge() {
+    public double getCharge() {
         return _movie.getCharge(_daysRented);
     }
 
-    int getFrequentRenterPoints() {
+    public int getFrequentRenterPoints() {
         // add frequent renter point
         return _movie.getPoints(_daysRented);
     }

@@ -1,8 +1,9 @@
+package demo.pfour;
 
 import java.util.Enumeration;
 import java.util.Vector;
 
-class Customer {
+public class Customer {
     private String _name;
     private Vector<Rental> _rentals = new Vector<Rental>();
 
@@ -25,7 +26,7 @@ class Customer {
         while (rentals.hasMoreElements()) {
 
             Rental each = (Rental) rentals.nextElement();
-            totalAmount += each.getCharge();;
+            totalAmount += each.getCharge();
         }
         return totalAmount;
     }

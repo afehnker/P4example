@@ -1,3 +1,5 @@
+package demo.pfour;
+
 public class Movie  {
     public static final int  CHILDRENS = 2;
     public static final int  REGULAR = 0;
@@ -37,7 +39,7 @@ public class Movie  {
         return _title;
     }
 
-    int getPoints(int dayRented) {
+    public int getPoints(int dayRented) {
         int points = 1;
 
         // add bonus for a two day new release rental
@@ -47,7 +49,7 @@ public class Movie  {
         return points;
     }
 
-    double getCharge(int daysRented) {
+    public double getCharge(int daysRented) {
         return _price.getCharge(daysRented);
     }
 }

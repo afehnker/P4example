@@ -1,6 +1,4 @@
-package demo.pfour;
-
-import demo.pfour.Movie;
+package demo.fowler;
 
 public class Rental {
     private Movie _movie;

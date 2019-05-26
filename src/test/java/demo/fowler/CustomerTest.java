@@ -1,4 +1,4 @@
-package demo.pfour;
+package demo.fowler;
 
 import org.junit.Test;
 

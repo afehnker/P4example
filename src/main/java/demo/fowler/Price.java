@@ -1,4 +1,4 @@
-package demo.pfour;
+package demo.fowler;
 
 public interface Price {
     public int getPriceCode();

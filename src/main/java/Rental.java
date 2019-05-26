@@ -34,4 +34,15 @@ class Rental {
         }
         return thisAmount;
     }
+
+    int getFrequentRenterPoints() {
+        // add frequent renter points
+        int points = 1;
+
+        // add bonus for a two day new release rental
+        if ((getMovie().getPriceCode() == Movie.NEW_RELEASE) && getDaysRented() > 1)
+            points++;
+        // show figures for this rental
+        return points;
+    }
 }

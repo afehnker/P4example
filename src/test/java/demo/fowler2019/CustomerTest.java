@@ -1,3 +1,5 @@
+package demo.fowler2019;
+
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;

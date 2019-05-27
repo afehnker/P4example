@@ -1,5 +1,7 @@
-class Rental {
-    Movie _movie;
+package demo.fowler2019;
+
+public class Rental {
+    public Movie _movie;
     private int _daysRented;
 
     public Rental(Movie movie, int daysRented) {

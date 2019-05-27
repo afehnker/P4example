@@ -1,3 +1,4 @@
+package demo.fowler2019;
 
 import java.util.Enumeration;
 import java.util.Vector;
@@ -5,9 +6,21 @@ import java.util.Vector;
 import java.util.Enumeration;
 import java.util.Vector;
 
-class Customer {
+public class Customer {
     private String _name;
     private Vector<Rental> _rentals = new Vector<Rental>();
+
+    public Customer(String name) {
+        _name = name;
+    }
+
+    public void addRental(Rental arg) {
+        _rentals.addElement(arg);
+    }
+
+    public String getName() {
+        return _name;
+    }
 
     public double getOwed() {
         double totalAmount = 0;
@@ -57,18 +70,5 @@ class Customer {
         }
         return frequentRenterPoints;
     }
-
-    public Customer(String name) {
-        _name = name;
-    }
-
-    public void addRental(Rental arg) {
-        _rentals.addElement(arg);
-    }
-
-    public String getName() {
-        return _name;
-    }
-
 
 }

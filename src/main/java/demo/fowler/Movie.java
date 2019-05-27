@@ -40,7 +40,7 @@ public class Movie  {
     }
 
     public int getPoints(int dayRented) {
-        int points = 1;
+        int points = 2;
 
         // add bonus for a two day new release rental
         if ((getPriceCode() == NEW_RELEASE) && dayRented > 1)
